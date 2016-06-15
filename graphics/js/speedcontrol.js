@@ -1,5 +1,6 @@
 'use strict';
 $(function () {
+    var speedcontrolBundle = 'nodecg-speedcontrol';
     // JQuery selector initialiation ###
     var $timerInfo = $('#timer');
     var $runnerInfoElements = $('div.runnerInfo');
@@ -26,7 +27,7 @@ $(function () {
     nodecg.listenFor('timerReset', resetTimer);
     nodecg.listenFor('timerSplit', splitTimer);
 
-    var stopWatchesReplicant = nodecg.Replicant('stopwatches');
+    var stopWatchesReplicant = nodecg.Replicant('stopwatches',speedcontrolBundle);
     stopWatchesReplicant.on('change', function(oldVal, newVal) {
         if (!newVal) return;
         var time  = newVal[0].time || '88:88:88';
@@ -38,14 +39,14 @@ $(function () {
         setTime(time);
     });
 
-    var runDataActiveRunReplicant = nodecg.Replicant("runDataActiveRun");
+    var runDataActiveRunReplicant = nodecg.Replicant("runDataActiveRun",speedcontrolBundle);
     runDataActiveRunReplicant.on("change", function (oldValue, newValue) {
         if(typeof newValue !== 'undefined' && newValue != '' ) {
             updateSceneFields(newValue);
         }
     });
 
-    var runDataActiveRunRunnerListReplicant = nodecg.Replicant("runDataActiveRunRunnerList");
+    var runDataActiveRunRunnerListReplicant = nodecg.Replicant("runDataActiveRunRunnerList",speedcontrolBundle);
     runDataActiveRunRunnerListReplicant.on("change", function (oldValue, newValue) {
         if(typeof newValue === 'undefined' || newValue == '') {
             return;
