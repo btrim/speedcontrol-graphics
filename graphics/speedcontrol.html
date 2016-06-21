@@ -1,8 +1,10 @@
-<html data-sceneid="Race_2player_4_3">
+<html data-sceneid="speedcontrol">
 <head>
     <link href="css/common.css" rel="stylesheet" title="Race_2player_4_3"/>
     <link href="css/common.css" rel="alternate stylesheet" title="intermission"/>
     <link href="css/Intermission.css" rel="alternate stylesheet" title="intermission"/>
+    <link rel="import" href="templates/player.html"/>
+
     <script src="components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="components/jquery/dist/jquery.min.js"></script>
     <script src="components/speedcontrol-graphics-js/js/animation.js"></script>
@@ -23,10 +25,7 @@
             <button id="resetCSSContentButton">Reset Layout</button>
         </div>
     </div>
-    <div id="gameCapture1" class="positionable gameCapture" aspect-ratio="4:3">
-    </div>
-    <div id="gameCapture2" class="positionable gameCapture" aspect-ratio="4:3">
-    </div>
+
     <div id="runner1TimerFinishedContainer" class="runnerTimerFinishedContainer positionable">
         <div class="finishedLogo"></div>
         <div class="dummyTextable runnerTimerFinished"></div>
@@ -36,18 +35,7 @@
         <div class="dummyTextable runnerTimerFinished"></div>
     </div>
     <div id="marathonLogo" class="positionable"> </div>
-    <div id="player1Container" class="playerContainer positionable">
-        <div class="runnerLogo">
-            <img class="twitchLogo" src="images/twitchlogo.png">
-        </div>
-        <div class="runnerInfo"> </div>
-    </div>
-    <div id="player2Container" class="playerContainer positionable">
-        <div class="runnerInfo"> </div>
-        <div class="runnerLogo">
-            <img class="twitchLogo" src="images/twitchlogo.png">
-        </div>
-    </div>
+
     <div id="timerContainer" class="positionable">
         <div id="timer">
         </div>

@@ -10,17 +10,21 @@ body {
   overflow:hidden;
   margin: 0px;
   padding: 0px;
+  background-color: black;
 
 /* The font size you want at 720p.  Other sizes are calculated from here */
 
   font-size: 15px;
+}
+#comingUp {
+  display: none;
 }
 
 #window-container {
     position: fixed;
     top: 0px;
     left: 0px;
-    background-image: url('/graphics/nodecg-speedcontrol/images/Background.png');
+    background-image: url('../images/Background.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 1280px;
@@ -80,7 +84,7 @@ body {
 }
 
 .runnerLogo {
-    background-image: url('/graphics/nodecg-speedcontrol/images/playerlogo.png');
+    background-image: url('../images/playerlogo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%;
@@ -159,7 +163,7 @@ body {
 }
 
 #runInformationLogo {
-    background-image: url('/graphics/nodecg-speedcontrol/images/runInformationIcon.png');
+    background-image: url('../images/runInformationIcon.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -195,7 +199,7 @@ body {
     top: 0px;
     width: 316px;
     height: 88px;
-    background-image: url('/graphics/nodecg-speedcontrol/images/SpeedcontrolLogo.png');
+    background-image: url('../images/SpeedcontrolLogo.png');
     background-repeat: no-repeat;
     background-size: 85%;
 }
@@ -226,7 +230,7 @@ body {
     width: 32px;
     height: 76%;
     padding: 5px;
-    background-image: url('/graphics/nodecg-speedcontrol/images/finishFlag.gif');
+    background-image: url('../images/finishFlag.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 76%;
@@ -254,4 +258,80 @@ body {
     z-index: 200;
     width: 100%;
     height: 30px;
+}
+#informationMarquee {
+    font-family: FFFForward;
+    color: #856899;
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    height: 0px;
+    width: 1280px;
+    overflow:hidden;
+    white-space: nowrap;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    font-size: 15px;
+    text-align: center;
+    display: none;
+}
+
+#comingUpGame {
+    padding: 2px;
+    color: #856899;
+    background: #362b41;
+    display: none;
+}
+
+#comingUpSystem {
+    padding-right: 5px;
+    color: #856899;
+    text-align: right;
+    background: #271e2f;
+    display: none;
+}
+#comingUpCathegory {
+    padding: 2px;
+    color: #856899;
+    background: #271e2f;
+    display: none;
+}
+
+#justMissedGame {
+    padding: 2px;
+    color: #856899;
+    background: #362b41;
+    display: none;
+}
+
+#justMissedSystem {
+    padding-right: 5px;
+    color: #856899;
+    text-align: right;
+    background: #271e2f;
+    display: none;
+}
+#justMissedCathegory {
+    padding: 2px;
+    color: #856899;
+    background: #271e2f;
+    display: none;
+}
+
+#comingUpRun {
+    position: fixed;
+    font-family: FFFForward;
+    font-size: 14px;
+    /*display: flex;*/
+    flex-flow: row wrap;
+    display: none;
+}
+
+#justMissedRun {
+    position: fixed;
+    font-family: FFFForward;
+    /*display: flex;*/
+    flex-flow: row wrap;
+    font-size: 14px;
+    display: none;
 }
