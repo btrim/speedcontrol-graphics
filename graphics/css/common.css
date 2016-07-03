@@ -63,6 +63,8 @@ body {
     border: 3px solid #663366;
     line-height: 50px;
     text-align: center;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 #runInformationGameEstimate:before {
